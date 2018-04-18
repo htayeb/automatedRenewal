@@ -1,0 +1,24 @@
+#enter-info {
+    color: #00b8e6;
+    font_size: 20px;
+    width: 300px;
+    margin:0 auto;
+}
+
+#enter-data {
+    width: 200px;
+    margin:0 auto;
+}
+.form-control {
+
+    border-radius: 1.25rem;
+}
+
+.btn-primary {
+    border-radiys: 1.25rem;
+
+}
+.btn {
+    border-radius: 1.25rem;
+    width: 200px;
+}
