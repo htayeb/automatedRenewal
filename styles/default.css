@@ -7,6 +7,7 @@ html {
     box-sizing: border-box;
 }
 body {
+    font-family: 'Montserrat', sans-serif;
     height: 100%;
     margin: 0;
 }
@@ -27,5 +28,19 @@ body {
 #logo {
     float: left;
     height: 100%;
-
 }
+
+/* ---------- Body --------- */
+.h1, h1 {
+    color: #009de0
+}
+.h2, h2 {
+    color: #444433
+}
+.h3, h3 {
+    color: #009de0
+}
+
+
+
+
