@@ -1,14 +1,15 @@
 html {
     width: 90%;
     border: 1px solid #009de0;
-    height: 100%;
+    min-height: 100%;
     position: center;
     margin: 0 auto;
+    margin-bottom: 10px;
     box-sizing: border-box;
 }
 body {
     font-family: 'Montserrat', sans-serif;
-    height: 100%;
+    min-height: 100%;
     margin: 0;
 }
 
@@ -38,6 +39,9 @@ body {
     color: #444433
 }
 .h3, h3 {
+    color: #009de0
+}
+.h4, h4 {
     color: #009de0
 }
 
