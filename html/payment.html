@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
 <head>
     <link rel="stylesheet" type="text/css" href="../styles/default.css">
     <meta charset="UTF-8">
@@ -7,9 +12,9 @@
 </head>
 <body>
 <h1>driver licence renewal</h1>
-<button type="button" class="btn">Cancel</button>
+<button type="button" class="btn btn-primary">Cancel</button>
 <button type="button" class="btn btn-primary">Go Back</button>
-<button type="button" class="btn">Submit Payment</button>
+<button type="button" class="btn btn-primary">Submit Payment</button>
 
 <h2>Payment Summary</h2>
 <h3>Fees</h3>
@@ -29,5 +34,34 @@
 
     </tbody>
 </table>
+<h4>Subtotal:</h4>
+<h4>$90</h4>
+<h4>Tax:</h4>
+<h4>$90</h4>
+<h4>Total:</h4>
+<h4>$1000</h4>
+<h2>Payment Information</h2>
+
+
+<div class="form-group">
+    <label for="crdNum">Card Number:</label>
+    <input type="number" class="form-control" id="crdNum">
+</div>
+<div class="form-group">
+    <label for="crdName">Name (as it appears on card):</label>
+    <input type="text" class="form-control" id="crdName">
+</div>
+<div class="form-group">
+    <label for="crdExp">Expiration Date:</label>
+    <input type="datetime-local" class="form-control" id="crdExp">
+</div>
+<div class="form-group">
+    <label for="crdCode">Security Code:</label>
+    <input type="number" class="form-control" id="crdCode">
+</div>
+
+
+
+
 </body>
 </html>
