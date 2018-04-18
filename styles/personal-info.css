@@ -7,3 +7,8 @@
 p {
     margin-bottom: 0.80rem;
 }
+.form-control{
+    padding: .180rem .40rem;
+    max-width: 200px;
+    margin-bottom: 10px;
+}

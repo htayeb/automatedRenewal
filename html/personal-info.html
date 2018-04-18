@@ -13,17 +13,27 @@
 </head>
 <body>
 <header>
-    <div id="icbc-header"><img id="logo" src="../images/icbc_logo.png" alt="icbc logo"></div>
+    <div style="font-size: 0px;">
+        <div id="icbc-header"><img id="logo" src="../images/icbc_logo.png" alt="icbc logo"></div>
+        <div class="progress" style="height: 10px;">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50"
+                 aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+    <p style="font-size: 15px; margin-bottom: 20px; text-indent: 10px;">Step 2 of 3: Personal Information
+        Verification</p>
 </header>
 <div class="container">
     <div style="display: flex; justify-content: space-between;">
-        <h4><strong>Driver License Renewal</strong></h4>
+        <h1>Driver License Renewal</h1>
         <div>
             <button class="btn btn-primary">Cancel</button>
             <button class="btn btn-primary">Go back</button>
             <button class="btn btn-primary">Next Step</button>
         </div>
-        <button class="btn btn-outline-primary">Need Help?</button>
+        <div>
+            <button class="btn btn-outline-primary">Need Help?</button>
+        </div>
     </div>
     <div>
         <h3>Please verify your personal information. Your information was extracted from your uploaded documents</h3>
@@ -43,18 +53,18 @@
                 <p style="text-indent: 10px;"> 1970 Jan 01</p>
 
                 <p>Weight</p>
-                <input type="text" name="weight"/>
+                <input class="form-control" type="text" name="weight"/>
                 <p>Height</p>
-                <input type="text" name="height"/>
+                <input class="form-control" type="text" name="height"/>
                 <p>Sex</p>
-                <input type="text" name="sex"/>
+                <input class="form-control" type="text" name="sex"/>
                 <p>Eyes</p>
-                <input type="text" name="eyes"/>
+                <input class="form-control" type="text" name="eyes"/>
                 <p>Hair</p>
-                <input type="text" name="hair"/>
+                <input class="form-control" type="text" name="hair"/>
                 <br/>
                 <br/>
-                <button class="btn" type="submit">Edit Information</button>
+                <button class="btn btn-success" type="submit">Edit Information</button>
             </div>
             <div class="col">
                 <h4>Contact Information</h4>
@@ -63,21 +73,23 @@
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="material-icons">mail_outline</i></div>
                     </div>
-                    <input type="text" name="email" placeholder="example@icbc.com">
+                    <input class="form-control" type="text" name="email" placeholder="example@icbc.com">
                 </div>
                 <p>Phone</p>
                 <div class="input-group mb-2 mr-sm-2">
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="material-icons">call</i></div>
                     </div>
-                    <input type="text" name="phone" placeholder="(604) 310-1010">
+                    <input class="form-control" type="text" name="phone" placeholder="(604) 310-1010">
                 </div>
                 <p>Address</p>
                 <p style="text-indent: 10px;"> 151 Esplanade W <br/>North Vancouver BC V7M 3H9</p>
             </div>
             <div class="col">
                 <h4 style="color: #3ADF00;"><strong>Has your address changed?</strong></h4>
-                <p>If your driver license does not have your current address, please <a href="https://you_are_an_idiot.com">click here</a> to learn what to do or something I don't know what to write</p>
+                <p>If your driver license does not have your current address, please <a
+                        href="https://you_are_an_idiot.com">click here</a> to learn what to do or something I don't know
+                    what to write</p>
             </div>
         </div>
     </form>
