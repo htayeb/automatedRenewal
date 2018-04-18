@@ -1,45 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../styles/default.css">
+    <link rel="stylesheet" type="text/css" href="../styles/personal-info.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
 
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+<header>
+    <div id="icbc-header"><img id="logo" src="../images/icbc_logo.png" alt="icbc logo"></div>
+</header>
 <div class="container">
     <div style="display: flex; justify-content: space-between;">
         <h4><strong>Driver License Renewal</strong></h4>
         <div>
-            <button class="btn">Cancel</button>
-            <button class="btn">Go back</button>
-            <button class="btn">Next Step</button>
+            <button class="btn btn-primary">Cancel</button>
+            <button class="btn btn-primary">Go back</button>
+            <button class="btn btn-primary">Next Step</button>
         </div>
-        <button class="btn">Need Help?</button>
+        <button class="btn btn-outline-primary">Need Help?</button>
     </div>
     <div>
         <h3>Please verify your personal information. Your information was extracted from your uploaded documents</h3>
+        <br/>
     </div>
-    <div class="row" style="display: flex; justify-content: space-around;">
-        <div class="col">
-            <h4>Personal Information</h4>
-            <p>Driver License Number</p>
-            <p> 1422938</p>
-            <p>First Name</p>
-            <p> John</p>
-            <p>Last Name</p>
-            <p> Smith</p>
-            <p>Date of Birth</p>
-            <p> 1970 Jan 01</p>
+    <form>
+        <div class="row" style="display: flex; justify-content: space-around;">
+            <div class="col">
+                <h4>Personal Information</h4>
+                <p>Driver License Number</p>
+                <p style="text-indent: 10px;"> 1422938</p>
+                <p>First Name</p>
+                <p style="text-indent: 10px;"> John</p>
+                <p>Last Name</p>
+                <p style="text-indent: 10px;"> Smith</p>
+                <p>Date of Birth</p>
+                <p style="text-indent: 10px;"> 1970 Jan 01</p>
+
+                <p>Weight</p>
+                <input type="text" name="weight"/>
+                <p>Height</p>
+                <input type="text" name="height"/>
+                <p>Sex</p>
+                <input type="text" name="sex"/>
+                <p>Eyes</p>
+                <input type="text" name="eyes"/>
+                <p>Hair</p>
+                <input type="text" name="hair"/>
+                <br/>
+                <br/>
+                <button class="btn" type="submit">Edit Information</button>
+            </div>
+            <div class="col">
+                <h4>Contact Information</h4>
+                <p>Email</p>
+                <div class="input-group mb-2 mr-sm-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="material-icons">mail_outline</i></div>
+                    </div>
+                    <input type="text" name="email" placeholder="example@icbc.com">
+                </div>
+                <p>Phone</p>
+                <div class="input-group mb-2 mr-sm-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="material-icons">call</i></div>
+                    </div>
+                    <input type="text" name="phone" placeholder="(604) 310-1010">
+                </div>
+                <p>Address</p>
+                <p style="text-indent: 10px;"> 151 Esplanade W <br/>North Vancouver BC V7M 3H9</p>
+            </div>
+            <div class="col">
+                <h4 style="color: #3ADF00;"><strong>Has your address changed?</strong></h4>
+                <p>If your driver license does not have your current address, please <a href="https://you_are_an_idiot.com">click here</a> to learn what to do or something I don't know what to write</p>
+            </div>
         </div>
-        <div class="col">a</div>
-        <div class="col">b</div>
-    </div>
+    </form>
 </div>
-
-
 
 
 <!--javascripts-->
