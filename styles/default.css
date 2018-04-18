@@ -1,0 +1,31 @@
+html {
+    width: 73%;
+    border: 1px solid #009de0;
+    height: 100%;
+    position: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+body {
+    height: 100%;
+    margin: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* ---------- Header --------- */
+#icbc-header {
+    display: inline-block;
+    background: linear-gradient(90deg, #009de0, #69DFE0);
+    height: 100px;
+    width: 100%;
+    padding: 2.3% 2.3%;
+}
+
+#logo {
+    float: left;
+    height: 100%;
+
+}
