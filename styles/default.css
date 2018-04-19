@@ -1,5 +1,5 @@
 html {
-    width: 90%;
+    width: 85%;
     border: 1px solid #009de0;
     min-height: 100%;
     position: center;
@@ -18,33 +18,135 @@ body {
 }
 
 /* ---------- Header --------- */
+#page-header {
+    font-size: 0;
+}
+
 #icbc-header {
     display: inline-block;
-    background: linear-gradient(90deg, #009de0, #69DFE0);
-    height: 100px;
+    background: linear-gradient(90deg, #009de0, #65b5ff);
     width: 100%;
-    padding: 2.3% 2.3%;
+
 }
 
 #logo {
-    float: left;
-    height: 100%;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    padding: 1.5%;
+}
+
+
+.container{
+    max-width: 100%;
+    overflow: auto;
+}
+
+.progress {
+    height: 5px;
+    border-radius: 0;
+}
+
+#step-count {
+    height:35px;
+    padding-left: 10px;
+    width: 100%;
+}
+
+#step-count p {
+    font-size: 15px;
+}
+
+#instructions {
+    margin-bottom: 1.5rem;
+}
+/* ---------- navbar flex ------------- */
+#navbar {
+    display: flex;
+}
+
+.nav-box {
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-box:first-child > span { margin-right: auto; }
+.nav-box:last-child > span { margin-left: auto; }
+
+#nav-buttons {
+    text-align: center;
+}
+
+#help-container {
+    text-align: right;
+}
+
+/* ---------- warnings ----------- */
+#placeholder-warning {
+    height: 1.5rem;
+    margin-bottom: 0.3rem;
+    padding: 0;
+}
+
+.alert {
+    padding: 0 1%;
+    margin-bottom: 0.3rem;
 }
 
 /* ---------- Body --------- */
 .h1, h1 {
-    color: #009de0
+    color: #009de0;
 }
 .h2, h2 {
-    color: #444433
+    color: #444433;
+    font-size: 24px;
 }
 .h3, h3 {
-    color: #009de0
+    color: #009de0;
 }
 .h4, h4 {
-    color: #009de0
+    color: #009de0;
 }
 
+.green-text {
+    color: #88cc02;
+}
 
+/* -------- colour scheme -------- */
 
+.btn-outline-primary {
+    border: 1px solid #009de0;
+    color: #444433;
+}
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary:visited {
+    background-color: #009de0 !important;
+    border: 1px solid #009de0 !important;
+}
+
+.btn-primary {
+    background-color: #009de0;
+    border: 1px solid #009de0;
+
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:visited {
+    background-color: #0086c3 !important;
+    border: 1px solid #0086c3 !important;
+
+}
+
+.btn-success {
+    background-color: #88cc02;
+    border: 1px solid #88cc02;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success:visited {
+    background-color: #76b102 !important;
+    border: 1px solid #76b102 !important;
+
+}
+
+.bg-success {
+    background-color: #88cc02 !important;
+}
 
