@@ -1,45 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../styles/default.css">
-    <link rel="stylesheet" type="text/css" href="../styles/document-upload.css">
+    <link rel="stylesheet" type="text/css" href="../styles/personal-info.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
     <meta charset="UTF-8">
-    <title>Document Upload</title>
+    <title>Title</title>
 </head>
 <body>
 <header>
-    <div id="page-header">
+    <div style="font-size: 0px;">
         <div id="icbc-header"><img id="logo" src="../images/icbc_logo.png" alt="icbc logo"></div>
-        <div class="progress">
-            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="75"
+        <div class="progress" style="height: 10px;">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50"
                  aria-valuemin="0" aria-valuemax="100"></div>
         </div>
     </div>
-    <div id="step-count">
-        <p>Step 1 of 3: Upload Required Documents</p>
-    </div>
+    <p style="font-size: 15px; margin-bottom: 20px; text-indent: 10px;">Step 1 of 3: Upload Documents</p>
 </header>
 <div class="container">
-    <div id="navbar">
-        <h1 id="page-title" class="nav-box">driver licence renewal</h1>
-        <div id="nav-buttons" class="nav-box">
+    <div style="display: flex; justify-content: space-between;">
+        <h1>Driver License Renewal</h1>
+        <div>
             <button class="btn btn-primary">Cancel</button>
             <button class="btn btn-primary">Go back</button>
             <button class="btn btn-primary">Next Step</button>
         </div>
-        <div id="help-container" class="nav-box">
-            <button id="help" class="btn btn-outline-primary">Need Help?</button>
+        <div>
+            <button class="btn btn-outline-primary">Need Help?</button>
         </div>
     </div>
-    <div id="placeholder-warning"></div>
-    <div id="instructions">
-        <h2>Upload the required documents. We will automatically verify the documents.</h2>
+    <div>
+        <h2>Upload the required documents. We will automatically verify your documents.</h2>
+        <br/>
+        <br/>
     </div>
+    <div>
+        <h3>Documents</h3>
+    </div>
+    <form>
+        <div class="row" style="display: flex; justify-content: space-around;">
+            <div class="col">
+                <p style="color:Black">Driver Licence</p>
+                <p style="color:#009900">Driver license verified </p>
+                <p style="color:"Black">Secondary ID</p>
+                <form method="post" action="file-upload-1.htm" name="submit" enctype="multipart/form-data">
+                    <div>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" >Select ID Type
+
+                         </button>
+                        <button class="btn btn-primary">Take Photo</button>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </div>
+                    </div>
+                    <input type="file" name="fileField"><br /><br />
+
+                </form>
+
+                <p style="color:Black">Portrait Photo</p>
+                <form method="post" action="file-upload-1.htm" name="submit" enctype="multipart/form-data">
+
+                    <div >
+
+                        <input class="form-control" type="text"  placeholder="Choose file..">
+                        <button class="btn btn-primary">Take Photo</button>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </div><div>
+
+                    </div>
+                    <input type="file" name="fileField"><br /><br />
+
+                </form>
+                <p>Photo of you holding your Driver Licence</p>
+            <br/>
+                <p>Template for other files</p>
+                <form method="post" action="file-upload-1.htm" name="submit" enctype="multipart/form-data">
+
+                    <div >
+
+                        <input class="form-control" type="text"  placeholder="Choose file..">
+                        <button class="btn btn-primary">Take Photo</button>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </div><div>
+
+                </div>
+                    <input type="file" name="fileField"><br /><br />
+
+                </form>
+
+
+
+
+
+            </div>
+            <div class="col">
+
+
+
+            <div class="col">
+                <h4 style="color: #3ADF00;"><strong>Document Guidelines</strong></h4>
+                <br/>
+                <p>Documents must be in colored PDF or image format.</p>
+                <p>Take photos in a brightly lit area. Make sure there are no reflections</p>
+            <br/>
+                <p>Driver's Licence:</p>
+                <p>some guidelines or something</p>
+            <br/>
+                <p>Accepted Secondary ID Types:</p>
+                <p>-Credit Card/Bank Card</p>
+                <p>-Passport</p>
+                <p>-Canadian Forces ID</p>
+
+                <br/> <br/>
+                <p>Portrait Photo:</p>
+                <p>Photo must have white background with centred face and without smiling.</p>
+
+                <br/> <br/>
+                <p>Please provide a photo of you holding your Driver Licence</p>
+
+
+
+               </p>
+            </div>
+        </div>
+    </form>
 </div>
+
+
+<!--javascripts-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
 </body>
 </html>
