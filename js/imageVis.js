@@ -1,5 +1,5 @@
 
-var b=JSON.stringify({"requests":[{  "image":{    "source":{"imageUri":"https://lh3.googleusercontent.com/pqCd29JyM7aju5dR5R28XbrausWm1TbfXQSwi7tidmX8EB73CZ5Q0WAXrc0Ed9q71WEofAHMxKEYVGWE7kKomAcH_I7z575tWIAwJ6r5ZZajmiYX2NMNyCnxegji7m4C1dvtjEPjsNhP0w1a3oMqVM1UuKvCXKTI5IkmkBF7fOiqDzSwZJeCGY-cRMHXW0vPpC_BxqL7oZPoAeHYnSI9If3CwVUqB-1UuSzUBW7Pq02z5zSzv-cxClp0lUdAS0ieMrZPIvSmT8B6YoXvKJjJeyRTmuIbSU8-epA-JXu0W8xGqzyVC1nwg9vn2sd4Z7tVQoj3qVIoO5OIqPpwzwiH4CnYB-wJcSC3SIf5IWVpfez9wkxGhKHFXCmIZZnBDQ-gcvWEVg5_2uurwIdPC2vU02vwgl9JEYclWx7wZkodBO-ZYAps3e3El--B8F1v-dvzoaokzFmRGHT2oxgO6mUTsmCFGr1B2LE0C1BTgrDTSlboefte2e-s-Q1mVk4naPtMVjgSUgKWinz5GQ499XOhDS018X_TqFhwD0dMiFEFNAmorifjydmNyppU7cMnWeunOHXBKuOnbxW9SkUAYAAIqu9SYv6fy1EeFQ12imMenW67vZOSu9OBAxGuoKdpSrY5RoFeDRepOfUR1mdOneH-7FhC-LlY7sj38Q=w954-h1272-no"}}  ,  "features": [{"type":"TEXT_DETECTION","maxResults":10}]    } ]});
+var b=JSON.stringify({"requests":[{  "image":{    "source":{"imageUri":"https://lh3.googleusercontent.com/yUSeWJ7djUeQFC9TNtqw5GKs1TgCG3qfROuehmd01NTymX3HK7yRpicJ47HeAapKGJV-oEmo5SzAT8zYdbJZiV2gDFwJ52OV9Mw_BGQxRuxIvUAkxHhujM0MpNvMZSbvSmBkm_iWY2fF6NrOEmFVQ4KblCK_e1M-lGp9E-h7w5sGsdCDWI-1pzNVuxpHCryfHx_xa4PPjxkAagpBdCmbVX1-NwsiBKrZ7QV9tV56Vf7BoNzvkJAO64pRfDMQFo7fpxjdlRIBtxXUbWeyJ_Aunt-b-csV0yqKfkkV4rmvqsbUUwAnnYBj8rHtC1b9WgMoxOizDuCPwH40du3o7ACJfZmjplRYLk2_q5eK2weeAgHl_JM7T7rq-0a9eDThJB7daEBo9xuI30OGRTMcdzh4PbhGQItgTljusTzvl5jdeiMF1Ar0xXSAemvT8ay1itWx7u6WMCEohHCiguXFbIwVE_VkluTxSPnxvDbOxmSd48tvPmH-EoIOLb3yMISPRNr-CtBgon_5szAphvS-EoQnTUioTKHMzmcmp57TQsbtO5zBSAbAEJnZ3CxO9hEkfElP3Qs2NgEAOnyy25KWFr_EZzjNKy2wDLNRWQaND42vvTsNRixd1Itig89ci4WlvVLBq_PxeaeCxSviLvu8qPhnK6HHKaIGrLStqw=w954-h1272-no"}}  ,  "features": [{"type":"TEXT_DETECTION","maxResults":10}]    } ]});
 var e=new XMLHttpRequest;
 
 e.onload=function(){var text = e.responseText;
@@ -8,9 +8,10 @@ e.onload=function(){var text = e.responseText;
 
     console.log(parsedText.replace(/[^a-zA-Z0-9-\n ]/gm, ""));
     console.log(parsedText);
-    var name = /[A-Z]+[,]*\n[A-Z]+\s/
+    var name = /[A-Z]+[,]*\n[A-Z]+\s+DL/
     var myTest = name.exec(parsedText);
     var nameText = myTest[0];
+    console.log(nameText);
     var lastName = nameText.split("\n")[0];
     var firstName = nameText.split("\n")[1].trim();
     console.log(lastName);
