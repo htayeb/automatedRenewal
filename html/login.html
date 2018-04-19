@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 <head>
-    <header>
-        <div id="icbc-header"><img id="logo" src="../images/icbc_logo.png" alt="icbc logo"></div>
-    </header>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../styles/default.css">
     <link rel="stylesheet" type="text/css" href="../styles/login.css">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Log In</title>
 </head>
 <body>
-<div class="container">
-    <div style="display: flex; justify-content: space-between;">
+<header>
+    <div id="page-header">
+        <div id="icbc-header"><img id="logo" src="../images/icbc_logo.png" alt="icbc logo"></div>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="0"
+                 aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+    <div id="step-count">
+    </div>
+    <div class="container">
+        <div>
+            <h1> driver licence renewal</h1>
+            <div>
+                <button class="btn btn-outline-primary" id="help">Need Help?</button>
+            </div>
+        </div>
+    </div>
+</header>
 
-<h1> Driver licence renewal</h1>
-    </div></div>
-
-<br><br><br><br>
-    <div id="enter-info"> <b>Please enter the following information</b></div><br>
-
+<h2 id="enter-info"> Please enter the following information</h2>
     <form id="enter-data">
         <div class="form-group">
-            <input type="text" class="form-control" id="exampleLastName" placeholder="Enter Last Name">
+            <input type="text" class="form-control" placeholder="Enter Last Name">
         </div>
         <div class="form-group">
-            <input type="number" class="form-control" id="exampleDriverLicense" placeholder="Driver License No.">
+            <input type="text" class="form-control" placeholder="Driver Licence No.">
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" id="exampleKeyWord" placeholder="Keyword">
+            <input type="text" class="form-control" placeholder="Keyword">
         </div>
-        <button type="submit;" class="btn btn-primary">Submit</button></form>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
-    </div>
 </body>
 </html>
