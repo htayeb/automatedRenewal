@@ -1,24 +1,22 @@
 #enter-info {
-    color: #00b8e6;
-    font_size: 20px;
-    width: 300px;
-    margin:0 auto;
+    text-align: center;
+    margin: 4em auto;
 }
 
-#enter-data {
+#enter-data, #enter-data .btn {
     width: 200px;
     margin:0 auto;
 }
-.form-control {
 
-    border-radius: 1.25rem;
+.container{
+    max-width: 100%;
+    overflow: auto;
 }
 
-.btn-primary {
-    border-radiys: 1.25rem;
-
+#help {
+    float:right;
 }
-.btn {
-    border-radius: 1.25rem;
-    width: 200px;
+
+h1 {
+    float: left;
 }
