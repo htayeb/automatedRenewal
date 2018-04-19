@@ -49,12 +49,48 @@ body {
 
 #step-count {
     height:35px;
-    text-indent: 10px;
+    padding-left: 10px;
     width: 100%;
 }
 
 #step-count p {
     font-size: 15px;
+}
+
+#instructions {
+    margin-bottom: 1.5rem;
+}
+/* ---------- navbar flex ------------- */
+#navbar {
+    display: flex;
+}
+
+.nav-box {
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-box:first-child > span { margin-right: auto; }
+.nav-box:last-child > span { margin-left: auto; }
+
+#nav-buttons {
+    text-align: center;
+}
+
+#help-container {
+    text-align: right;
+}
+
+/* ---------- warnings ----------- */
+#placeholder-warning {
+    height: 1.5rem;
+    margin-bottom: 0.3rem;
+    padding: 0;
+}
+
+.alert {
+    padding: 0 1%;
+    margin-bottom: 0.3rem;
 }
 
 /* ---------- Body --------- */
@@ -72,7 +108,11 @@ body {
     color: #009de0;
 }
 
-/* -------- button colour scheme -------- */
+.green-text {
+    color: #88cc02;
+}
+
+/* -------- colour scheme -------- */
 
 .btn-outline-primary {
     border: 1px solid #009de0;
@@ -82,6 +122,7 @@ body {
     background-color: #009de0 !important;
     border: 1px solid #009de0 !important;
 }
+
 .btn-primary {
     background-color: #009de0;
     border: 1px solid #009de0;
@@ -90,9 +131,22 @@ body {
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:visited {
     background-color: #0086c3 !important;
-    border: 1px solid #009de0 !important;
+    border: 1px solid #0086c3 !important;
 
 }
 
+.btn-success {
+    background-color: #88cc02;
+    border: 1px solid #88cc02;
+}
 
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success:visited {
+    background-color: #76b102 !important;
+    border: 1px solid #76b102 !important;
+
+}
+
+.bg-success {
+    background-color: #88cc02 !important;
+}
 
