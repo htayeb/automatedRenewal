@@ -1,15 +1,22 @@
-.container{
-    max-width: 100%;
-    overflow: auto;
+.bg-success {
+    width: 50%;
 }
+
 .input-group-text{
     padding: .180rem .40rem;
 }
 p {
-    margin-bottom: 0.80rem;
+    margin-bottom: 0.5rem;
+    font-size: 12px;
+}
+
+.filled {
+    padding-left: 10px;
+    font-size: 14px;
 }
 .form-control{
     padding: .180rem .40rem;
     max-width: 200px;
     margin-bottom: 10px;
+    font-size: 12px;
 }
