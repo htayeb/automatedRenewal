@@ -42,7 +42,7 @@
     <div id="instructions">
         <h2>Please verify your personal information. Your information was extracted from your uploaded documents</h2>
     </div>
-    <form>
+    <form name="infoForm" onsubmit="return validateAllFields()">
         <div class="row" style="display: flex; justify-content: space-around;">
             <div class="col">
                 <h4>Personal Information</h4>
@@ -55,15 +55,15 @@
                 <p>Date of Birth</p>
                 <p class="filled"> 1970 Jan 01</p>
                 <p>Weight</p>
-                <input class="form-control" type="text" name="weight"/>
+                <input class="form-control" type="text" name="weight" required/>
                 <p>Height</p>
-                <input class="form-control" type="text" name="height"/>
+                <input class="form-control" type="text" name="height" required/>
                 <p>Sex</p>
-                <input class="form-control" type="text" name="sex"/>
+                <input class="form-control" type="text" name="sex" required/>
                 <p>Eyes</p>
-                <input class="form-control" type="text" name="eyes"/>
+                <input class="form-control" type="text" name="eyes" required/>
                 <p>Hair</p>
-                <input class="form-control" type="text" name="hair"/>
+                <input class="form-control" type="text" name="hair" required/>
                 <button class="btn btn-success" type="submit">Edit Information</button>
             </div>
             <div class="col">
@@ -94,7 +94,6 @@
             </div>
         </div>
     </form>
-    <div id="demo"></div>
 </div>
 
 
@@ -108,8 +107,26 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
         integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
+<!--<i class="material-icons">report_problem</i>-->
 <script>
-    document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    function validateAllFields () {
+        document.getElementById("placeholder-warning").classList.add("alert-warning");
+        document.getElementById("placeholder-warning").classList.add("alert");
+
+        var para = document.createElement("i");
+        para.classList.add("material-icons");
+        para.innerHTML = "report_problem";
+        var para2 = document.createTextNode("Is this working stupid?");
+
+
+        console.log(para);
+        document.getElementById("placeholder-warning").appendChild(para);
+        document.getElementById("placeholder-warning").appendChild(para2);
+        console.log(element);
+        return false;
+
+        //window.location.replace("http://stackoverflow.com");
+    }
 </script>
 </body>
 </html>
