@@ -1,3 +1,14 @@
 .bg-success {
     width: 75%;
 }
+.row{
+    margin-left: 51.5rem;
+}
+
+.h5, h5{
+    line-height: 1.0;
+    font-size: 1.0rem;
+    margin-left: .5rem;
+}
+
+
