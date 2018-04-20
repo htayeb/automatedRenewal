@@ -51,6 +51,7 @@ body {
     height:35px;
     padding-left: 10px;
     width: 100%;
+    overflow: visible;
 }
 
 #step-count p {
@@ -63,6 +64,7 @@ body {
 /* ---------- navbar flex ------------- */
 #navbar {
     display: flex;
+    overflow: visible;
 }
 
 .nav-box {
@@ -116,35 +118,39 @@ body {
 
 /* -------- colour scheme -------- */
 
-.btn-outline-primary {
+.btn-outline-primary, .btn-outline-primary:visited {
     border: 1px solid #009de0;
     color: #444433;
 }
-.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary:visited {
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
     background-color: #009de0 !important;
     border: 1px solid #009de0 !important;
+    box-shadow: none;
+
 }
 
-.btn-primary {
+.btn-primary, .btn-primary:visited  {
     background-color: #009de0;
     border: 1px solid #009de0;
-
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:visited {
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
     background-color: #0086c3 !important;
     border: 1px solid #0086c3 !important;
+    box-shadow: none;
 
 }
 
-.btn-success {
+.btn-success, .btn-success:visited {
     background-color: #88cc02;
     border: 1px solid #88cc02;
 }
 
-.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success:visited {
+.btn-success:hover, .btn-success:focus, .btn-success:active {
     background-color: #76b102 !important;
     border: 1px solid #76b102 !important;
+    box-shadow: none;
+
 
 }
 

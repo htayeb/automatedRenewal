@@ -6,8 +6,8 @@
     padding: .180rem .40rem;
 }
 p {
-    margin-bottom: 0.5rem;
-    font-size: 12px;
+    margin-bottom: 0.3rem;
+    font-size: 14px;
 }
 
 .filled {
@@ -19,4 +19,8 @@ p {
     max-width: 200px;
     margin-bottom: 10px;
     font-size: 12px;
+}
+
+.radio-inline {
+    margin-right: 1rem;
 }

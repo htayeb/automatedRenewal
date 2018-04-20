@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../styles/default.css">
     <link rel="stylesheet" type="text/css" href="../styles/document-upload.css">
+    <script type="text/javascript" src="../js/index.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Document Upload</title>
@@ -32,13 +33,13 @@
         <div id="nav-buttons" class="nav-box">
             <button class="btn btn-primary">Cancel</button>
             <button class="btn btn-primary">Go back</button>
-            <button class="btn btn-primary">Next Step</button>
+            <button class="btn btn-primary" onclick="goToPersonalInfo()">Next Step</button>
         </div>
         <div id="help-container" class="nav-box">
             <a href="http://www.icbc.com/about-icbc/contact-us/Pages/default.aspx" id="help" class="btn btn-outline-primary" role="button" target="_blank">Need Help?</a>
         </div>
     </div>
-    <div id="placeholder-warning"></div>
+    <div id="placeholder-warning" class="custom-warning"></div>
     <div id="instructions">
         <h2>Please upload the required documents. We will automatically verify the documents.</h2>
     </div>
