@@ -18,7 +18,7 @@ function validateAllFields(event) {
     errorMessage = createErrorMessage(errorMessage, "Phone", phone);
 
 
-    if (errorMessage != "") {
+    if (errorMessage != "Please Enter") {
         event.preventDefault();
         document.getElementById("placeholder-warning").classList.add("alert-warning");
         document.getElementById("placeholder-warning").classList.add("alert");

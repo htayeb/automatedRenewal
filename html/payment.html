@@ -2,10 +2,18 @@
 <html lang="en">
 <head>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+            integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+            integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+            crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../styles/default.css">
     <link rel="stylesheet" type="text/css" href="../styles/payment.css">
     <meta charset="UTF-8">
@@ -25,81 +33,127 @@
     </div>
 </header>
 <div class="container">
-    <div id="navbar">
-        <h1 id="page-title" class="nav-box">driver licence renewal</h1>
-        <div id="nav-buttons" class="nav-box">
-            <button class="btn btn-primary">Cancel</button>
-            <button class="btn btn-primary">Go back</button>
-            <button class="btn btn-primary">Submit Payment</button>
+    <form action="confirmation.html" name="infoForm">
+        <div id="navbar">
+            <h1 id="page-title" class="nav-box">driver licence renewal</h1>
+            <div id="nav-buttons" class="nav-box">
+                <button class="btn btn-primary">Cancel</button>
+                <button class="btn btn-primary">Go back</button>
+                <button class="btn btn-primary" type="submit" onclick="return validateAllFields(event)">Submit Payment</button>
+            </div>
+            <div id="help-container" class="nav-box">
+                <button id="help" class="btn btn-outline-primary">Need Help?</button>
+            </div>
         </div>
-        <div id="help-container" class="nav-box">
-            <button id="help" class="btn btn-outline-primary">Need Help?</button>
+        <div id="placeholder-warning"></div>
+        <div id="instructions">
+            <h2>Payment Summary</h2>
         </div>
-    </div>
-    <div id="placeholder-warning"></div>
-    <div id="instructions">
-        <h2>Payment Summary</h2>
-    </div>
 
-    <h3>Fees</h3>
-    <table class="table table-bordered table-sm">
-        <thead>
-        <tr>
-            <th>Description</th>
-            <th>Price</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Driver Licence Renewal</td>
-            <td>75$</td>
-        </tr>
+        <h3>Fees</h3>
+        <table class="table table-bordered table-sm">
+            <thead>
+            <tr>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Driver Licence Renewal</td>
+                <td>75$</td>
+            </tr>
 
 
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-xs-6"><h5>Subtotal:</h5></div>
+            <div class="col-xs-6"><h5>$90</h5></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6"><h5>Tax:</h5></div>
+            <div class="col-xs-6"><h5>$90</h5></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6"><h5>Total:</h5></div>
+            <div class="col-xs-6"><h5>$1000</h5></div>
+        </div>
 
 
-        </tbody>
-    </table>
-    <div class="row">
-        <div class="col-xs-6"> <h5>Subtotal:</h5></div>
-        <div class="col-xs-6"><h5>$90</h5></div>
-    </div>
-    <div class="row">
-        <div class="col-xs-6"> <h5>Tax:</h5></div>
-        <div class="col-xs-6"><h5>$90</h5></div>
-    </div>
-    <div class="row">
-        <div class="col-xs-6"> <h5>Total:</h5></div>
-        <div class="col-xs-6">  <h5>$1000</h5></div>
-    </div>
+        <h2>Payment Information</h2>
 
 
-
-
-
-
-    <h2>Payment Information</h2>
-
-
-    <div class="form-group">
-        <label for="crdNum">Card Number:</label>
-        <input type="number" class="form-control" id="crdNum">
-    </div>
-    <div class="form-group">
-        <label for="crdName">Name (as it appears on card):</label>
-        <input type="text" class="form-control" id="crdName">
-    </div>
-    <div class="form-group">
-        <label for="crdExp">Expiration Date:</label>
-        <input type="datetime-local" class="form-control" id="crdExp" pattern="dd/mm/yyyy" required>
-    </div>
-    <div class="form-group">
-        <label for="crdCode">Security Code:</label>
-        <input type="number" class="form-control" id="crdCode">
-    </div>
+        <div class="form-group">
+            <label for="crdNum">Card Number:</label>
+            <input type="number" class="form-control" id="crdNum" name="crdNum">
+        </div>
+        <div class="form-group">
+            <label for="crdName">Name (as it appears on card):</label>
+            <input type="text" class="form-control" id="crdName" name="crdName">
+        </div>
+        <div class="form-group">
+            <label for="crdExp">Expiration Date:</label>
+            <input type="datetime-local" class="form-control" id="crdExp" name="crdExp" pattern="dd/mm/yyyy">
+        </div>
+        <div class="form-group">
+            <label for="crdCode">Security Code:</label>
+            <input type="number" class="form-control" id="crdCode" name="crdCode">
+        </div>
+    </form>
 
 
 </div>
+<script>
+    var errorMessage = "Please Enter";
+
+    function validateAllFields(event) {
+        console.log("wdfwdfwdf")
+        const num = document.forms["infoForm"]["crdNum"].value;
+        const name = document.forms["infoForm"]["crdName"].value;
+        const exp = document.forms["infoForm"]["crdExp"].value;
+        const code = document.forms["infoForm"]["crdCode"].value;
+
+        console.log(num + " " + name);
+        errorMessage = createErrorMessage(errorMessage, "Card Number", num);
+        errorMessage = createErrorMessage(errorMessage, "Owner Name", name);
+        errorMessage = createErrorMessage(errorMessage, "Expiration Date", exp);
+        errorMessage = createErrorMessage(errorMessage, "Security Code", code);
+
+
+        if (errorMessage != "Please Enter") {
+            event.preventDefault();
+            document.getElementById("placeholder-warning").classList.add("alert-warning");
+            document.getElementById("placeholder-warning").classList.add("alert");
+
+            var para = document.createElement("i");
+            para.classList.add("material-icons");
+            para.innerHTML = "report_problem";
+            var para2 = document.createTextNode(errorMessage);
+
+            document.getElementById("placeholder-warning").appendChild(para);
+            document.getElementById("placeholder-warning").appendChild(para2);
+
+            errorMessage = "Please Enter";
+            return false;
+        }
+    }
+
+    function createErrorMessage(message, append, element) {
+        console.log(element);
+        console.log(element == "");
+        if (element == "") {
+            console.log(message == "Please Enter");
+            if (message == "Please Enter") {
+                console.log(message + " " + append);
+                return message + " " + append;
+            } else {
+                return message + ", " + append;
+            }
+        }
+        return message;
+    }
+</script>
 
 </body>
 </html>
