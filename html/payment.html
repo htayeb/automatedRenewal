@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../styles/default.css">
     <link rel="stylesheet" type="text/css" href="../styles/payment.css">
+    <script type="text/javascript" src="../js/index.js"></script>
     <meta charset="UTF-8">
     <title>Payment</title>
 </head>
@@ -39,18 +40,43 @@
             <div id="nav-buttons" class="nav-box">
                 <button class="btn btn-primary">Cancel</button>
                 <button class="btn btn-primary">Go back</button>
-                <button class="btn btn-primary" type="submit" onclick="return validateAllFields(event)">Submit Payment</button>
+                <button class="btn btn-primary" onclick="goToConfirmation()">Submit Payment</button>
             </div>
             <div id="help-container" class="nav-box">
-                <button id="help" class="btn btn-outline-primary">Need Help?</button>
+                <a href="http://www.icbc.com/about-icbc/contact-us/Pages/default.aspx" id="help" class="btn btn-outline-primary" role="button" target="_blank">Need Help?</a>
             </div>
         </div>
-        <div id="placeholder-warning"></div>
+        <div id="placeholder-warning" class="custom-warning"></div>
         <div id="instructions">
             <h2>Payment Summary</h2>
         </div>
 
         <h3>Fees</h3>
+
+        <div class="flex-container">
+            <div class="column-1 with-border">
+                <div id="description">&nbsp;&nbsp;&nbsp;Description</div>
+                <div id="feelabel">&nbsp;&nbsp;&nbsp;Driver Licence Renewal</div>
+            </div>
+            <div class="column-2">
+                <div id="price">&nbsp;Price</div>
+                <div id="fee">&nbsp;$75</div>
+            </div>
+        </div>
+        <div class="flex-container no-border">
+            <div class="column-1">
+                <div id="subtotal">Subtotal: </div>
+                <div id="taxes">Tax: </div>
+                <div id="total">Total: </div>
+            </div>
+            <div class="column-2">
+                <div id="pricing">&nbsp;$75</div>
+                <div id="tax">&nbsp;$9</div>
+                <div id="totalprice">&nbsp;$84</div>
+            </div>
+        </div>
+<!--
+
         <table class="table table-bordered table-sm">
             <thead>
             <tr>
@@ -61,24 +87,24 @@
             <tbody>
             <tr>
                 <td>Driver Licence Renewal</td>
-                <td>75$</td>
+                <td>$75</td>
             </tr>
-
 
             </tbody>
         </table>
         <div class="row">
-            <div class="col-xs-6"><h5>Subtotal:</h5></div>
-            <div class="col-xs-6"><h5>$90</h5></div>
+            <div class="col-xs-6" id="subtotal"><h5>Subtotal:</h5></div>
+            <div class="col-xs-6"><h5>$75</h5></div>
         </div>
         <div class="row">
-            <div class="col-xs-6"><h5>Tax:</h5></div>
-            <div class="col-xs-6"><h5>$90</h5></div>
+            <div class="col-xs-6" id="tax"><h5>Tax:</h5></div>
+            <div class="col-xs-6"><h5>$9</h5></div>
         </div>
         <div class="row">
-            <div class="col-xs-6"><h5>Total:</h5></div>
+            <div class="col-xs-6" id="total"><h5>Total:</h5></div>
             <div class="col-xs-6"><h5>$1000</h5></div>
         </div>
+-->
 
 
         <h2>Payment Information</h2>
@@ -86,7 +112,7 @@
 
         <div class="form-group">
             <label for="crdNum">Card Number:</label>
-            <input type="number" class="form-control" id="crdNum" name="crdNum">
+            <input type="text" class="form-control" id="crdNum" name="crdNum" maxlength="16">
         </div>
         <div class="form-group">
             <label for="crdName">Name (as it appears on card):</label>
@@ -94,17 +120,16 @@
         </div>
         <div class="form-group">
             <label for="crdExp">Expiration Date:</label>
-            <input type="datetime-local" class="form-control" id="crdExp" name="crdExp" pattern="dd/mm/yyyy">
+            <input type="text" class="form-control" id="crdExp" name="crdExp" placeholder="mm/yyyy">
         </div>
         <div class="form-group">
             <label for="crdCode">Security Code:</label>
-            <input type="number" class="form-control" id="crdCode" name="crdCode">
+            <input type="text" class="form-control" id="crdCode" name="crdCode" maxlength="4">
         </div>
     </form>
 
 
 </div>
-<script src="../js/payment.js"></script>
 
 </body>
 </html>

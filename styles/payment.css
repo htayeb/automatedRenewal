@@ -11,4 +11,60 @@
     margin-left: .5rem;
 }
 
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
 
+
+.column-1 {
+    display: inline-block;
+    flex: 10;
+}
+
+
+.column-1 *, .column-2 * {
+    border: 1px solid #ced4da;
+}
+#description {
+    border-radius: 5px 0 0 0;
+}
+
+#price {
+    border-left: none;
+    border-radius: 0 5px 0 0;
+}
+
+#feelabel {
+    border-top: none;
+    border-radius: 0 0 0 5px;
+}
+
+#fee {
+    border-left: none;
+    border-top: none;
+    border-radius: 0 0 5px 0;
+}
+
+.no-border .column-1 {
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.no-border * {
+    border: none;
+}
+
+.column-2 {
+    display: inline-block;
+    flex: 1;
+}
+
+.form-control {
+    max-width: 30%;
+    max-height: 2rem;
+}
+
+.form-group {
+    font-size: 0.8rem;
+}

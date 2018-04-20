@@ -68,6 +68,32 @@ function goToPayment() {
     }
 }
 
+function goToConfirmation() {
+    const num = document.forms["infoForm"]["crdNum"].value;
+    const name = document.forms["infoForm"]["crdName"].value;
+    const exp = document.forms["infoForm"]["crdExp"].value;
+    const code = document.forms["infoForm"]["crdCode"].value;
+
+    var isCrCardNumberValid = /[0-9]{16}/.test(num);
+    var isCodeValid = /[0-9]*/.test(code);
+
+    if (!num) {
+        throwError("Please enter your credit card number");
+    } else if (!isCrCardNumberValid) {
+        throwError("Please enter a valid credit card number");
+    } else if (!name) {
+        throwError("Please enter the name on your credit card");
+    } else if (!exp) {
+        throwError("Please enter your credit card's expiry date");
+    } else if (!code) {
+        throwError("Please enter your security code");
+    } else if (!isCodeValid) {
+        throwError("Please enter a valid security code");
+    } else {
+        window.location.href = "confirmation.html";
+    }
+}
+
 function throwError(err) {
     event.preventDefault();
     document.getElementsByClassName("custom-warning")[0].classList.add("alert-warning");
@@ -85,4 +111,3 @@ function throwError(err) {
 
 
 }
-
