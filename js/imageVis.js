@@ -1,5 +1,5 @@
 
-var b=JSON.stringify({"requests":[{  "image":{    "source":{"imageUri":"https://lh3.googleusercontent.com/yUSeWJ7djUeQFC9TNtqw5GKs1TgCG3qfROuehmd01NTymX3HK7yRpicJ47HeAapKGJV-oEmo5SzAT8zYdbJZiV2gDFwJ52OV9Mw_BGQxRuxIvUAkxHhujM0MpNvMZSbvSmBkm_iWY2fF6NrOEmFVQ4KblCK_e1M-lGp9E-h7w5sGsdCDWI-1pzNVuxpHCryfHx_xa4PPjxkAagpBdCmbVX1-NwsiBKrZ7QV9tV56Vf7BoNzvkJAO64pRfDMQFo7fpxjdlRIBtxXUbWeyJ_Aunt-b-csV0yqKfkkV4rmvqsbUUwAnnYBj8rHtC1b9WgMoxOizDuCPwH40du3o7ACJfZmjplRYLk2_q5eK2weeAgHl_JM7T7rq-0a9eDThJB7daEBo9xuI30OGRTMcdzh4PbhGQItgTljusTzvl5jdeiMF1Ar0xXSAemvT8ay1itWx7u6WMCEohHCiguXFbIwVE_VkluTxSPnxvDbOxmSd48tvPmH-EoIOLb3yMISPRNr-CtBgon_5szAphvS-EoQnTUioTKHMzmcmp57TQsbtO5zBSAbAEJnZ3CxO9hEkfElP3Qs2NgEAOnyy25KWFr_EZzjNKy2wDLNRWQaND42vvTsNRixd1Itig89ci4WlvVLBq_PxeaeCxSviLvu8qPhnK6HHKaIGrLStqw=w954-h1272-no"}}  ,  "features": [{"type":"TEXT_DETECTION","maxResults":10}]    } ]});
+var b=JSON.stringify({"requests":[{  "image":{    "source":{"imageUri":"https://lh3.googleusercontent.com/sjXDn7IDspiD-_gKBV50MJcZ-bDU7Xshct0r2s_MRy0pvAOafiZNrSaKuiPElUilxaQfsrSNeTZl3G7hnTePnTCw0nuF8FJ7dJD4OYcLNEPfvCdoXx-JyWEht1xQLwuRQx956EFOf6ldnKzwbQ2AQIH_a8qzmEFVuyUdJEauuHyA8bMilLxn_c9LVo_v2Z7LQOZ_BNFW9mH-_gFzhfleOT4SjgXnZUftaJR5qPQwTncG6AT-ckQAWzY-Z-cgFxdvUWL6NlLggs61GW0MBuhZ-VQZD2ebrpPkMtWCRxR36WwLCdxLIdu9GTp6JO07nZ90MdZ2ZB_YofpR14zwlwSfNiI5Je5iCZAMMzGkBxBCSI5Pm7-bY9xv2ZtiiEMFKs4bysjHQlCsxARNnTb6C29MqzElMykTpswgW51ZnTP5JyNdWMtPLKEAdb8gI_UaMJk3sSDcWFq9Wj7mQm1J1B46zttP2kP6quG4qGrgxKSz3P3068l6v_p026ph2aIlJmdwtmkanLgTWO75iJedZLzXqZjt_5hDKCWCdfLmSvjPZEyVEVW_9bBxT95NBEHN7Ly2MJf5xaTLvH4tkNOKEaJxOwUXN3STW0qgC-y_uzSMCpX2by-vlUSqFZDe4RTFPxJoe749A5eZaRHOnKhpryEOezaDhWfOJa3UsA=w1166-h1554-no"}}  ,  "features": [{"type":"TEXT_DETECTION","maxResults":10}]    } ]});
 var e=new XMLHttpRequest;
 
 e.onload=function(){var text = e.responseText;
@@ -8,12 +8,12 @@ e.onload=function(){var text = e.responseText;
 
     console.log(parsedText.replace(/[^a-zA-Z0-9-\n ]/gm, ""));
     console.log(parsedText);
-    var name = /[A-Z]+[,]*\n[A-Z]+\s+DL/
+    var name = /[A-Z]+[,]*\n[A-Z]+[\s*[A-Z]*]*\s+DL/
     var myTest = name.exec(parsedText);
     var nameText = myTest[0];
     console.log(nameText);
-    var lastName = nameText.split("\n")[0];
-    var firstName = nameText.split("\n")[1].trim();
+    var lastName = nameText.split("\n")[0].replace(/[^a-zA-Z0-9-\n ]/gm, "");
+    var firstName = nameText.split("\n")[1].trim().replace(/[^a-zA-Z0-9-\n ]/gm, "");
     console.log(lastName);
     console.log(firstName);
     var dlNum = /DL:\s*[0-9]+/
@@ -40,9 +40,9 @@ e.onload=function(){var text = e.responseText;
     var myEyes = eyes.exec(parsedText);
     var myEyesText = myEyes[0].split(":")[1].trim();
     console.log(myEyesText);
-    var hair = /Hair[:]*.[A-Z]{3}/
+    var hair = /Hair[:]*.\s*[A-Z]{3}/
     var myHair = hair.exec(parsedText);
-    var myHairText = myHair[0].split(":")[1].trim();
+    var myHairText = myHair[0].split(" ")[1].trim();
     console.log(myHairText);
     document.getElementById('firstName').innerHTML=firstName;
     document.getElementById('lastName').innerHTML=lastName;
