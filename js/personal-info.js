@@ -1,6 +1,8 @@
-var errorMessage = "Please Enter";
+var errorMessage = "";
 
 function validateAllFields(event) {
+    errorMessage = "Please enter your ";
+
     const weight = document.forms["infoForm"]["weight"].value;
     const height = document.forms["infoForm"]["height"].value;
     const sex = document.forms["infoForm"]["sex"].value;
@@ -18,30 +20,33 @@ function validateAllFields(event) {
     errorMessage = createErrorMessage(errorMessage, "Phone", phone);
 
 
-    if (errorMessage != "") {
+    if (errorMessage != "Please enter your ") {
         event.preventDefault();
-        document.getElementById("placeholder-warning").classList.add("alert-warning");
-        document.getElementById("placeholder-warning").classList.add("alert");
+        document.getElementsByClassName("custom-warning")[0].classList.add("alert-warning");
+        document.getElementsByClassName("custom-warning")[0].classList.add("alert");
 
         var para = document.createElement("i");
         para.classList.add("material-icons");
         para.innerHTML = "report_problem";
         var para2 = document.createTextNode(errorMessage);
 
-        document.getElementById("placeholder-warning").appendChild(para);
-        document.getElementById("placeholder-warning").appendChild(para2);
+        document.getElementsByClassName("custom-warning")[0].innerHTML = "";
+        document.getElementsByClassName("custom-warning")[0].appendChild(para);
+        document.getElementsByClassName("custom-warning")[0].appendChild(para2);
+        document.getElementsByClassName("custom-warning")[0].removeAttribute('id');
 
-        errorMessage = "Please Enter";
-        return false;
+    } else {
+        window.location.href = "payment.html";
     }
 }
 
 function createErrorMessage(message, append, element) {
-    console.log(element);
+    console.log("element == empty")
+    console.log(element == "");
     console.log(element == "");
     if (element == "") {
-        console.log(message == "Please Enter");
-        if (message == "Please Enter") {
+        console.log(message == "Please enter your ");
+        if (message == "Please enter your ") {
             console.log(message + " " + append);
             return message + " " + append;
         } else {

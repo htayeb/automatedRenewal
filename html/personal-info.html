@@ -40,28 +40,28 @@
         <div id="nav-buttons" class="nav-box">
             <button class="btn btn-primary">Cancel</button>
             <button class="btn btn-primary">Go back</button>
-            <button class="btn btn-primary">Next Step</button>
+            <button class="btn btn-primary"  onclick="goToPayment()">Next Step</button>
         </div>
         <div id="help-container" class="nav-box">
             <button id="help" class="btn btn-outline-primary">Need Help?</button>
         </div>
     </div>
-    <div id="placeholder-warning"></div>
+    <div id="placeholder-warning" class="custom-warning"></div>
     <div id="instructions">
-        <h2>Please verify your personal information. Your information was extracted from your uploaded documents</h2>
+        <h2>Please verify your personal information. Your information was extracted from your uploaded documents.</h2>
     </div>
     <form name="infoForm">
         <div class="row" style="display: flex; justify-content: space-around;">
             <div class="col">
                 <h4>Personal Information</h4>
-                <p>Driver License Number</p>
-                <input class="form-control" type="text" id="dlNumber" required/>
+                <p>Driver Licence Number</p>
+                <p class="filled" id="dlNumber">&nbsp;</p>
                 <p>First Name</p>
-                <input class="form-control" type="text" id="firstName"required/>
+                <p class="filled" id="firstName">&nbsp;</p>
                 <p>Last Name</p>
-                <input class="form-control" type="text" id="lastName"required/>
+                <p class="filled" id="lastName">&nbsp;</p>
                 <p>Date of Birth</p>
-                <input class="form-control" type="text" id="dob"required/>
+                <p class="filled" id="dob">&nbsp;</p>
                 <p>Weight</p>
                 <input class="form-control" type="text" id="weight"required/>
                 <p>Height</p>
@@ -72,9 +72,6 @@
                 <input class="form-control" type="text" id="eyes"required/>
                 <p>Hair</p>
                 <input class="form-control" type="text" id="hair"required/>
-                <button class="btn btn-success" type="submit" onclick="return validateAllFields(event)">Edit
-                    Information
-                </button>
 
             </div>
             <div class="col">
@@ -95,13 +92,15 @@
                 </div>
                 <p>Address</p>
                 <p class="filled"> 151 Esplanade W <br/>North Vancouver BC V7M 3H9</p>
+                <p class="green-text">Has your address changed?</p>
+                <label class="radio-inline"><input type="radio" name="optradio">&nbsp;Yes</label>
+                <label class="radio-inline"><input type="radio" name="optradio" checked="true">&nbsp;No</label>
             </div>
             <div class="col">
                 <h4 class="green-text"><strong>Has your address changed?</strong></h4>
                 <br/>
-                <p>If your driver license does not have your current address, please <a
-                        href="https://you_are_an_idiot.com">click here</a> to learn what to do or something I don't know
-                    what to write</p>
+                <p>If your driver licence does not have your current address, please <a
+                        href="#">click here</a> to learn what to do.</p>
             </div>
         </div>
     </form>
@@ -118,7 +117,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
         integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
-<script src="../js/personal-info.js"></script>
+<script src="../js/index.js"></script>
 <script src="../js/imageVis.js"></script>
 </body>
 </html>
