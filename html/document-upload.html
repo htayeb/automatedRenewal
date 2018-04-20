@@ -52,8 +52,8 @@
                 <p>Driver Licence</p>
                 <div class="input-container">
                     <div class="custom-file">
-                        <input type="file" name="myFile" class="custom-file-input" id="customFile1" required>
-                        <label class="custom-file-label" for="customFile1">Choose file...</label>
+                        <input type="file" name="myFile" class="custom-file-input" id="customFile1" required onchange="updateFileName('customFile1','customFile1Label')">
+                        <label class="custom-file-label" for="customFile1" id="customFile1Label">Choose file...</label>
                         <div class="invalid-feedback">Example invalid custom file feedback</div>
                     </div>
                     <button class="take-photo btn btn-primary">Take Photo</button>
@@ -72,8 +72,8 @@
                 </div>
                 <div class="input-container">
                     <div class="custom-file">
-                        <input type="file" name="myFile" class="custom-file-input" id="customFile2" required>
-                        <label class="custom-file-label" for="customFile2">Choose file...</label>
+                        <input type="file" name="myFile" class="custom-file-input" id="customFile2" required onchange="updateFileName('customFile2','customFile2Label')">
+                        <label class="custom-file-label" for="customFile2" id="customFile2Label">Choose file...</label>
                         <div class="invalid-feedback">Example invalid custom file feedback</div>
                     </div>
                     <button class="take-photo btn btn-primary">Take Photo</button>
@@ -81,8 +81,8 @@
                 <p>Portrait Photo</p>
                 <div class="input-container">
                     <div class="custom-file">
-                        <input type="file" name="myFile" class="custom-file-input" id="customFile3" required>
-                        <label class="custom-file-label" for="customFile3">Choose file...</label>
+                        <input type="file" name="myFile" class="custom-file-input" id="customFile3" required onchange="updateFileName('customFile3','customFile3Label')">
+                        <label class="custom-file-label" for="customFile3" id="customFile3Label">Choose file...</label>
                         <div class="invalid-feedback">Example invalid custom file feedback</div>
                     </div>
                     <button class="take-photo btn btn-primary">Take Photo</button>
@@ -90,8 +90,8 @@
                 <p>Photo of You Holding Your Licence</p>
                 <div class="input-container">
                     <div class="custom-file">
-                        <input type="file" name="myFile" class="custom-file-input" id="customFile4" required>
-                        <label class="custom-file-label" for="customFile4">Choose file...</label>
+                        <input type="file" name="myFile" class="custom-file-input" id="customFile4" required onchange="updateFileName('customFile4','customFile4Label')">
+                        <label class="custom-file-label" for="customFile4" id="customFile4Label">Choose file...</label>
                         <div class="invalid-feedback">Example invalid custom file feedback</div>
                     </div>
                     <button class="take-photo btn btn-primary">Take Photo</button>
@@ -119,7 +119,7 @@
 
 </div>
 
-
-
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="../js/fileUpload.js"></script>
 </body>
 </html>
